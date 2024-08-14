@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+
+
+final randomizer = Random();
+
 class DiceRollor extends StatefulWidget {
   const DiceRollor({super.key});
   @override
@@ -16,9 +20,9 @@ class _DiceRollorState extends State<DiceRollor> {
 
   void diceRoll() {
     setState(() {
-      currentDiceRoll1 = Random().nextInt(6) + 1;
-      currentDiceRoll2 = Random().nextInt(6) + 1;
-      currentDiceRoll3 = Random().nextInt(6) + 1;
+      currentDiceRoll1 = randomizer.nextInt(6) + 1;
+      currentDiceRoll2 = randomizer.nextInt(6) + 1;
+      currentDiceRoll3 = randomizer.nextInt(6) + 1;
     });
   }
 
@@ -38,7 +42,7 @@ class _DiceRollorState extends State<DiceRollor> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Triple Dice Roller',
+              'Multi Dice Roller',
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
