@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:multi_dice_roller/gradient_container.dart';
+import 'package:multi_dice_roller/screen_handler.dart';
 
 void main() {
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: GradientContainer(Colors.amberAccent, Colors.black87,),
+        body: ScreenHandler(),
       ),
     ),
   );
